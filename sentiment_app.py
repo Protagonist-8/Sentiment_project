@@ -1,12 +1,14 @@
 import streamlit as st
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
+import nltk
 import re
 import joblib
 
 # Load model + vectorizer
 model = joblib.load("sentiment_model.pkl")
 tfidf = joblib.load("tfidf_vectorizer.pkl")
+nltk.download('stopwords')
 port_stem=PorterStemmer()
 # Preprocessing function (same as training!)
 def stemming(content):
