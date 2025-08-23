@@ -37,7 +37,13 @@ if st.button("Predict"):
         pred = model.predict(features)[0]
         prob = model.predict_proba(features)[0]
 
-        st.write(f"**Prediction:** {pred}")
-        st.write(f"**Confidence:** {max(prob):.2f}")
+        if(pred == 1):
+            pred = "Positive"
+            st.write(f"Wow, someone is in a good mood Today!!!")
+            st.write(f"**I can say this with:** {max(prob):.2f} confidence")
+        else:
+            pred = "Negative"
+            st.write(f"Uh Oh, someone is in a bad mood Today!!!, Don't worry, things will get better.")
+            st.write(f"**I can say this with:** {max(prob):.2f} confidence")
     else:
         st.write("Please enter some text.")
