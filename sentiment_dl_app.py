@@ -149,6 +149,7 @@ if st.button("Predict"):
             # Final text
             generated_text = f"Okay, I understand the vibe I can extend your {pred_label} sentence:" + cleaned_text + " " +  " ".join(generated_tokens)
 
-            print(f"Generated tokens: {generated_tokens}")
-            print(f"Generated text: {generated_text}")
+            st.write(f"Okay, I understand the vibe I can extend your {pred_label} sentence:")
+            st.write(generated_text)
+
 
