@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import random
 
 class BiLSTMClassifier(nn.Module):
@@ -150,3 +151,4 @@ if st.button("Predict"):
 
             print(f"Generated tokens: {generated_tokens}")
             print(f"Generated text: {generated_text}")
+
