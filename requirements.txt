@@ -1,5 +1,5 @@
 streamlit
-scikit-learn
-numpy
-nltk
-joblib
+pickle
+torch
+torch.nn
+random
